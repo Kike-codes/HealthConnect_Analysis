@@ -1,132 +1,89 @@
-# HealthConnect Clinic Appointment Attendance & No-Show Analysis
+# HealthConnect Appointment Attendance & No-Show Analysis
 
 ## Project Overview
 
-This project analyzes appointment attendance and no-show patterns for HealthConnect Clinic using 5,000 appointment records.
+HealthConnect is a healthcare appointment analytics project focused on understanding appointment attendance and no-show patterns and translating data-driven findings into decision support.
 
-The analysis focuses on understanding appointment outcomes and identifying factors associated with missed appointments. The project was developed using Excel, Power Query and Power BI, with supporting documentation created throughout the analysis process.
-
-## Business Problem
-
-HealthConnect Clinic needs to better understand appointment attendance and missed appointments in order to identify patterns that may support improved appointment management and patient engagement.
-
-The analysis explores appointment outcomes, patient characteristics, previous appointment behaviour, booking lead time, reminder activity, distance to the clinic and waiting time.
+The project was developed as part of the AnalystLab Africa Experience Lab.
 
 ## Dataset
 
-- 5,000 appointment records
-- 18 variables
-- 1,696 unique patients
-- Appointment outcomes: Attended, No-Show and Cancelled
+The analysis uses 5,000 appointment records containing patient, appointment, reminder, booking and attendance-related information.
 
-The cleaned dataset is available in the `data` folder.
+The project examines:
+- Appointment outcomes
+- Attendance and no-show rates
+- Previous no-show history
+- Booking lead time
+- Reminder status and channel
+- Distance to clinic
+- Appointment type
+- Other relevant appointment characteristics
 
-## Key KPIs
+## Week 5 — Initial Analysis
 
-| KPI | Result |
-|---|---:|
-| Total Appointments | 5,000 |
-| Attendance Rate | 48.8% |
-| No-Show Rate | 51.2% |
-| Cancellation Rate | 5.3% |
-| Average Booking Lead Time | 29.6 days |
+Week 5 established the baseline analysis and a two-page Power BI dashboard covering appointment outcomes, attendance and no-show patterns.
 
-## Key Findings
+Key baseline KPIs included:
 
-### 1. Previous No-Show History
+- Total appointments: 5,000
+- Attendance rate: 48.8%
+- No-show rate: 51.2%
+- Cancellation rate: 5.3%
+- Average booking lead time: 29.6 days
 
-Patients with previous no-show records had higher current no-show rates.
+## Week 6 — Advanced Analytics & Decision Support
 
-- No previous no-shows: 46.3%
-- 1 previous no-show: 55.9%
-- 2+ previous no-shows: 63.5%
+Week 6 extended the Week 5 analysis through deeper segment-level investigation and KPI validation.
 
-This suggests that previous appointment behaviour may be useful as an operational risk indicator.
+Four advanced analyses were developed:
 
-### 2. Booking Lead Time
+1. Previous No-Show History × Reminder Status
+2. Booking Lead Time × Reminder Status
+3. Previous No-Show History × Reminder Status — Attendance
+4. Distance × Appointment Type
 
-No-show rates increased as booking lead time increased.
+### Key Findings
 
-- 0–3 days: 26.6%
-- 4–7 days: 32.3%
-- 8–14 days: 35.2%
-- 15–30 days: 45.5%
-- 31+ days: 63.9%
+- Reminder-associated no-show rates were lower among patients with previous no-shows, with the largest difference among patients with 2+ previous no-shows.
+- No-show rates increased as booking lead time increased, with the highest rates among appointments booked 31+ days ahead.
+- The largest reminder-associated attendance difference occurred among patients with 2+ previous no-shows.
+- No-show rates were generally highest for appointments 21+ km from the clinic.
 
-Appointments booked further in advance showed a substantially higher no-show rate.
+## Decision Support
 
-### 3. Reminder Status
+The Week 6 analysis highlighted three areas for further operational attention:
 
-Appointments associated with a reminder had a higher attendance rate than appointments without a recorded reminder.
+- Prioritising patients with repeated previous no-shows for targeted reminders and appointment confirmation.
+- Considering additional confirmation touchpoints for appointments booked well in advance.
+- Reviewing access and attendance support for patients travelling longer distances to the clinic.
 
-- Reminder sent: 50.1% attendance
-- No reminder: 45.4% attendance
+These recommendations are based on observed associations and should be validated through further testing.
 
-This represents an attendance difference of approximately 4.8 percentage points.
+## KPI Definitions
 
-### 4. Distance to Clinic
+Attendance and no-show rates use attended and no-show appointments as the denominator, with cancelled appointments treated separately.
 
-Among appointments with recorded distance information, patients located 21+ km from the clinic had a higher no-show rate than those located 0–5 km away.
+## Limitations
 
-- 21+ km: 60.5%
-- 0–5 km: 48.7%
+The analysis is observational and does not establish causal relationships.
 
-This indicates that accessibility and travel distance may warrant further investigation.
+Missing values were retained rather than artificially imputed where appropriate. Waiting time was not treated as a primary predictive driver because it may contain post-appointment information.
 
-### 5. Appointment Outcomes
+## Cross-Track Integration
 
-No-shows represented 51.2% of non-cancelled appointments, highlighting a significant opportunity to improve appointment attendance.
+Week 6 analytical findings were shared with the Data Science track to support consideration of relevant variables and patterns for future predictive modelling.
 
-## Recommendations
-
-1. Introduce targeted follow-up for patients with previous no-show history.
-2. Consider additional confirmation or reminder strategies for appointments booked far in advance.
-3. Review reminder coverage and opportunities to improve patient engagement.
-4. Investigate accessibility challenges affecting patients travelling longer distances.
-5. Use previous attendance behaviour as an operational indicator when prioritising follow-up.
-
-## Data Quality and Limitations
-
-The dataset was reviewed for missing values, duplicates, inconsistent values and date-related issues.
-
-Missing values for reminder channel, distance to clinic and waiting time were retained rather than artificially imputed.
-
-Repeated patient IDs were retained because a patient may legitimately have multiple appointments.
-
-No-show rate was calculated using Attended and No-Show appointments, while Cancelled appointments were treated separately.
-
-The findings describe associations in the available data and should not be interpreted as evidence of causation.
-
-## Cross-Track Collaboration
-
-A simulated discussion with the Product/Business Analysis track focused on translating the appointment attendance findings into practical clinic operations. Key areas discussed included previous no-show behaviour, booking lead time, reminder coverage and patient distance. The input helped strengthen the recommendations by connecting the analytical findings to targeted patient follow-ups and improved appointment management.
-
-## Tools Used
-
-- Microsoft Excel
-- Power Query
-- Microsoft Power BI
-- DAX
-- GitHub
+Where further feedback was unavailable within the Week 6 timeframe, the Data Analytics deliverables were completed independently in accordance with project guidance.
 
 ## Repository Structure
 
-```text
-HealthConnect_Analysis
-│
-├── data/
-│   └── Healthconnect appointment data(cleaned).xlsx
-│
-├── documentation/
-│   ├── Healthconnect initial data analysis.pdf
-│   ├── Healthconnect Clinic Project summary.pdf
-│   ├── HealthConnect Week 5 Analysis.pdf
-│   └── HealthConnect Week 5 Project Summary.pdf
-│
-├── dashboard/
-│   ├── HealthConnect Week 5 Dashboard.pdf
-│   ├── HealthConnect Dashboard Overview.png
-│   └── HealthConnect No-Show Drivers.png
-│
-├── HealthConnect Week 5 Dashboard.pbix
-└── README.md
+- `data/` — project data and supporting data resources
+- `analysis/` — analytical work
+- `dashboard/` — Power BI dashboard files and screenshots
+- `documentation/` — project reports and documentation
+- `evidence/` — Week 6 supporting evidence
+
+## Week 7 Focus
+
+The next stage will focus on testing the identified patterns further, assessing modelling readiness, validating important variables and incorporating relevant cross-track feedback when available.
