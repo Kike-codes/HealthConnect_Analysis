@@ -87,3 +87,67 @@ Where further feedback was unavailable within the Week 6 timeframe, the Data Ana
 ## Week 7 Focus
 
 The next stage will focus on testing the identified patterns further, assessing modelling readiness, validating important variables and incorporating relevant cross-track feedback when available.
+# HealthConnect Appointment Attendance & No-Show Analysis
+
+## Project Overview
+
+This project analyzes healthcare appointment attendance and no-show behaviour using the HealthConnect appointment dataset.
+
+The analysis was developed as part of the AnalystLab Africa Experience Lab and progressed from exploratory analysis in Week 5 to advanced analysis in Week 6 and structured testing, refinement and validation in Week 7.
+
+## Week 7: Testing, Refinement & Validation
+
+Week 7 focused on validating the Week 6 Data Analytics outputs rather than rebuilding the analysis.
+
+### Testing Activities
+
+- KPI validation
+- Advanced analytical output validation
+- Dashboard cross-filter interaction testing
+- Dashboard slicer testing
+- Missing-value handling validation
+- Dashboard usability review
+- End-to-end analytical validation
+
+### Key Validation Results
+
+The main dashboard KPIs were validated successfully:
+
+- Total Appointments: 5,000
+- Attendance Rate: 48.8%
+- No-Show Rate: 51.2%
+- Cancellation Rate: 5.3%
+- Average Booking Lead Time: 29.6 days
+
+Most tested advanced analytical outputs were consistent with independently validated results.
+
+A discrepancy was identified in two values within the Previous No-Show History × Reminder Status visual and was documented for further calculation/filter-context review.
+
+## Key Insights
+
+- Previous no-show history remains an important segmentation variable for attendance analysis.
+- No-show rates increase across longer booking lead-time groups.
+- Appointments associated with reminders showed different attendance patterns across patient segments.
+- Appointments involving greater distance from the clinic showed relatively higher no-show rates in several segments.
+
+These findings represent observed associations and should not be interpreted as causal effects.
+
+## Data Quality & Limitations
+
+- Missing values were retained rather than incorrectly imputed.
+- Cancelled appointments were treated separately from attended and no-show appointments.
+- The analysis is observational and does not establish causality.
+- Waiting time was treated cautiously because it may contain post-appointment information.
+- Cross-track testing was not completed during Week 7 because a collaborating track was unavailable.
+
+## Tools
+
+- Power BI
+- Excel
+- Power Query
+- Microsoft Word
+- GitHub
+
+## Week 7 Evidence
+
+Testing records and supporting evidence are included in the repository folders.
