@@ -151,3 +151,64 @@ These findings represent observed associations and should not be interpreted as 
 ## Week 7 Evidence
 
 Testing records and supporting evidence are included in the repository folders.
+
+## Week 8 — Final Integration, Presentation & Decision Support
+
+HealthConnect is a healthcare analytics project focused on improving patient appointment attendance and supporting better healthcare administration.
+
+### Data Analytics Contribution
+
+The Data Analytics track analyzed 5,000 appointment records using Excel, Power Query and Power BI.
+
+The analytical process covered:
+
+- Data understanding and preparation
+- KPI development
+- Attendance and no-show analysis
+- Patient and appointment segmentation
+- Advanced analytical comparisons
+- Dashboard development
+- Testing and validation
+- Business insights and decision support
+
+### Final KPIs
+
+| KPI | Value |
+|---|---:|
+| Total Appointments | 5,000 |
+| Attendance Rate | 48.8% |
+| No-Show Rate | 51.2% |
+| Cancellation Rate | 5.3% |
+| Average Booking Lead Time | 29.6 days |
+
+### Key Findings
+
+- Previous no-show history was associated with higher observed no-show rates.
+- Longer booking lead times were associated with higher observed no-show rates.
+- Reminder-associated appointments showed a higher attendance rate overall.
+- Greater travel distance was associated with higher no-show rates in several segments.
+
+### Decision Support
+
+The analysis supported recommendations around:
+
+1. Targeted reminders and confirmation for patients with repeated previous no-shows.
+2. Additional confirmation touchpoints for appointments booked far in advance.
+3. Further investigation of access-related factors for patients travelling longer distances.
+
+### Testing & Validation
+
+The Week 7 testing process included KPI validation, analytical validation, dashboard interaction testing, missing-value review and usability checks.
+
+A discrepancy identified in the Previous No-Show History × Reminder Status visual was documented for further calculation/filter-context review rather than being changed without sufficient evidence.
+
+### Limitations
+
+The analysis is observational and does not establish causality. Missing values were retained where appropriate, and waiting-time information was treated cautiously because of potential data-leakage concerns for future predictive modelling.
+
+### Deliverables
+
+- Final Analytics & Decision Support Report
+- Final Power BI Dashboard
+- Final Presentation
+- Testing & Validation Evidence
